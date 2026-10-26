@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astrophotography Target Picker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Source+Serif+4:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img id="backdrop" alt="">
+  <img class="photo" src="ff-hi.webp" alt="Milky Way and Andromeda above trees">
+
+  <main id="quiz">
+    <h1>Astrophotography Target Picker</h1>
+
+    <section id="lens-question">
+      <h2>What lens are you using?</h2>
+      <button onclick="chooseLens('wide')">Wide-field</button>
+      <button onclick="chooseLens('telephoto')">Telephoto</button>
+    </section>
+
+    <section id="season-question" hidden>
+      <h2>What time of year are you taking photos?</h2>
+      <button onclick="chooseSeason('spring')">Spring</button>
+      <button onclick="chooseSeason('summer')">Summer</button>
+      <button onclick="chooseSeason('fall')">Fall</button>
+      <button onclick="chooseSeason('winter')">Winter</button>
+    </section>
+
+  </main>
+
+  <section id="result" hidden>
+    <h2 id="target-name"></h2>
+    <p id="target-desc"></p>
+    <button onclick="goBack()">Back</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
